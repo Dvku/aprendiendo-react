@@ -1,5 +1,18 @@
-export function XFollowCard ({ userName, name, isFollowing }) {
-    console.log(isFollowing)
+import { useState } from "react"
+
+
+export function XFollowCard ({ children, userName, initialIsFollowing }) {
+
+    const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
+    
+    const text = isFollowing ? "Siguiendo" : "Seguir"
+    const buttonClassName = isFollowing
+        ? "x-followCard-button is-following"
+        : "x-followCard-button"
+
+    const handleClick = () => {
+        setIsFollowing(!isFollowing)
+    }
 
     return (
         <article className="x-followCard">
@@ -7,19 +20,21 @@ export function XFollowCard ({ userName, name, isFollowing }) {
             <header className="x-followCard-header">
                 <img 
                     className="x-followCard-avatar"
-                    alt="Avatar de Rami Malek" 
-                    src={`https://unavatar.io/x/${userName}`} />
+                    alt={`El avatar de ${children}`} 
+                    src={`https://unavatar.io/x/${userName}`}
+                />
 
                 <div className="x-followCard-info">
-                    <strong>{name}</strong>
+                    <strong>{children}</strong>
                     <span className="x-followCard-infoUserName">@{userName}</span>
                 </div>
 
             </header>
 
             <aside>
-                <button className="x-followCard-button">
-                    Seguir
+                <button className={buttonClassName} onClick={handleClick}>
+                    <span className="x-followCard-text">{text}</span>
+                    <span className="x-followCard-stopFollow">Dejar de seguir</span>
                 </button>
             </aside>
 
