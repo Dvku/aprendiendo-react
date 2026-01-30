@@ -3,8 +3,6 @@ import { useCatImage } from './hooks/useCatImage.js';
 import { useCatFact } from './hooks/useCatFact.js';
 
 
-const CAT_PREFIX_IMAGE_URL = 'https://cataas.com';
-
 export function App() {
 
     const { fact, refreshFact } = useCatFact();
