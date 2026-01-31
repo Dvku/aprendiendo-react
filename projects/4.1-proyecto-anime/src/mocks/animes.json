@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "mal_id": 20,
+      "title": "Naruto",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/13/17405.jpg"
+        }
+      }
+    },
+    {
+      "mal_id": 1735,
+      "title": "Naruto: Shippuuden",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/1565/111305.jpg"
+        }
+      }
+    },
+    {
+      "mal_id": 16870,
+      "title": "The Last: Naruto the Movie",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/10/67631.jpg"
+        }
+      }
+    }
+  ]
+}
